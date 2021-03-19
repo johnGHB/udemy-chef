@@ -2,11 +2,15 @@ package 'tree' do
   action :install
 end
 
+package 'git' do
+  action :install
+end
+
 package 'ntp' do
   action :install
 end
 
-service 'ntpd' do
+service 'ntp' do
   action [ :enable, :start ]
 end
 
